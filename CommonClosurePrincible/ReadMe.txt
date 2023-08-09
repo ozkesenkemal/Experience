@@ -1,0 +1,3 @@
+﻿Single Responsibility ye benzer bir prensip...
+sistemde oluşacak bir değişiklik sistemin yapısını komple etkilememelidir. Benzer işleri yapan sınıflar aynı namespace altında
+olacağında o namespace i değiştiren tek bir sebep olmalıdır diyor çok da farklı bulmadım.
