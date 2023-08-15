@@ -2,8 +2,13 @@
 using Chess;
 using Common;
 using ExperienceConsole;
+using FactoryPattern;
+using Singleton;
+using System.Data.SqlClient;
+
 
 #region "Chess"
+/*
 const short xsize = 8, ysize = 8;
 ChessGame game = new ChessGame("Chess", true, 2);
 Console.WriteLine(game.AddBoard(xsize, ysize));
@@ -58,5 +63,35 @@ while (game.Board.StoneList.Select(x => x.Value).ToList().Where(x => x != null).
 }
 
 
+*/
+#endregion
+
+
+#region Singleton
+
+MySingleton mySingleton1 = MySingleton.GetMySingletonObj(); 
+MySingleton mySingleton2 = MySingleton.GetMySingletonObj();
+
+if(mySingleton1.GetHashCode == mySingleton2.GetHashCode)
+{
+    Console.WriteLine("objeler aynı.");
+}  
+Logger logger = Logger.GetInstance();
+logger.Info("deneme");
+logger.Error("deneme err");
 
 #endregion
+
+
+#region "Factory GOF"
+PaymentFactory paymentFactory = new PaymentFactory();
+IPayment payment = paymentFactory.DoPayment("CreditCard");
+payment.DoPayment();
+
+payment = paymentFactory.DoPayment("Eft");
+payment.DoPayment();
+
+payment = paymentFactory.DoPayment("AtDoor");
+payment.DoPayment();
+#endregion
+
