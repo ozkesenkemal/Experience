@@ -6,5 +6,10 @@
         {
             Console.WriteLine("At door payment was done!");
         }
+
+        public void DoSomeOtherJobs()
+        {
+            Console.WriteLine("At door other job was done!");
+        }
     }
 }

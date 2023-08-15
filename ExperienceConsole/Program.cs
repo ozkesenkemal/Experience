@@ -87,11 +87,14 @@ logger.Error("deneme err");
 PaymentFactory paymentFactory = new PaymentFactory();
 IPayment payment = paymentFactory.DoPayment("CreditCard");
 payment.DoPayment();
+payment.DoSomeOtherJobs();
 
 payment = paymentFactory.DoPayment("Eft");
 payment.DoPayment();
+payment.DoSomeOtherJobs();
 
 payment = paymentFactory.DoPayment("AtDoor");
 payment.DoPayment();
+payment.DoSomeOtherJobs();
 #endregion
 
