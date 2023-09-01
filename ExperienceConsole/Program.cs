@@ -2,6 +2,7 @@
 using AbstractFactoryPattern;
 using AbstractFactoryPattern.DBConnection;
 using AbstractFactoryPattern.Publisher.Factories;
+using BuilderPattern;
 using Chess;
 using Common;
 using ExperienceConsole;
@@ -131,5 +132,24 @@ publisher2.Publish();
 
 Publisher<TwitterVideoPublisherFactory> publisher3 = new Publisher<TwitterVideoPublisherFactory>("video");
 publisher3.Publish();
+#endregion
+
+
+#region Builder GOF
+CarProducer carProducer = new CarProducer();
+CarBuilder carBuilder = new MercedesBuilder();
+carProducer.Produce(carBuilder, "CLA", GearType.Manuel.GetKey(), 6001);
+Console.WriteLine(carBuilder.Car.ToString());
+
+carProducer.Produce(carBuilder, "Vito", GearType.Automatic.GetKey(), 90000);
+Console.WriteLine(carBuilder.Car.ToString());
+
+carBuilder = new BmwBuilder();
+carProducer.Produce(carBuilder, "X5", GearType.Automatic.GetKey(), 0);
+Console.WriteLine(carBuilder.Car.ToString());
+
+carBuilder = new TOGGBuilder();
+carProducer.Produce(carBuilder, "T10X", GearType.Electric.GetKey(), 0);
+Console.WriteLine(carBuilder.Car.ToString());
 #endregion
 
