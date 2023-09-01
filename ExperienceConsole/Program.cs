@@ -1,4 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using AbstractFactoryPattern;
+using AbstractFactoryPattern.DBConnection;
+using AbstractFactoryPattern.Publisher.Factories;
 using Chess;
 using Common;
 using ExperienceConsole;
@@ -96,5 +99,37 @@ payment.DoSomeOtherJobs();
 payment = paymentFactory.DoPayment("AtDoor");
 payment.DoPayment();
 payment.DoSomeOtherJobs();
+#endregion
+
+#region Abstract Factory
+OracleFactory oracleFactory = new OracleFactory();
+PostgresqlFactory postgresqlFactory = new PostgresqlFactory();
+Factory factory = new Factory(oracleFactory);
+factory.Start("select * from oracle");
+
+factory = new Factory(postgresqlFactory);
+factory.Start("select * from postgres");
+
+FactoryGeneric<OracleFactory> factoryGenericOracle = new FactoryGeneric<OracleFactory>();
+factoryGenericOracle.Start("insert into oracle");
+
+
+FactoryGeneric<PostgresqlFactory> factoryGenericPostgresql = new FactoryGeneric<PostgresqlFactory>();
+factoryGenericPostgresql.Start("insert into postgresql");
+
+
+
+
+
+Publisher<FacebookTextPublisherFactory> publisher1 = new Publisher<FacebookTextPublisherFactory>("text");
+publisher1.Publish();
+
+
+Publisher<FacebookVideoPublisherFactory> publisher2 = new Publisher<FacebookVideoPublisherFactory>("video");
+publisher2.Publish();
+
+
+Publisher<TwitterVideoPublisherFactory> publisher3 = new Publisher<TwitterVideoPublisherFactory>("video");
+publisher3.Publish();
 #endregion
 

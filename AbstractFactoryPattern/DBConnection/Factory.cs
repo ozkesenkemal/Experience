@@ -29,7 +29,7 @@
         private Connection _connection;
         private Command _command;
 
-        public FactoryGeneric(DatabaseFactory databaseFactory)
+        public FactoryGeneric()
         {
             _databaseFactory = new T();
             _connection = _databaseFactory.CreateConnection();
