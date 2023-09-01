@@ -39,7 +39,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuilderPattern", "BuilderPa
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CreationalGofs", "CreationalGofs", "{ED273B13-8072-4D8B-A004-AB7A07423C01}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrototaypePattern", "PrototaypePattern\PrototaypePattern.csproj", "{5C839C27-EB03-4E0A-88A6-BA02BAE35714}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrototypePattern", "PrototaypePattern\PrototypePattern.csproj", "{5C839C27-EB03-4E0A-88A6-BA02BAE35714}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
