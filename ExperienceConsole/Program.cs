@@ -7,6 +7,7 @@ using Chess;
 using Common;
 using ExperienceConsole;
 using FactoryPattern;
+using PrototaypePattern;
 using Singleton;
 using System.Data.SqlClient;
 
@@ -151,5 +152,22 @@ Console.WriteLine(carBuilder.Car.ToString());
 carBuilder = new TOGGBuilder();
 carProducer.Produce(carBuilder, "T10X", GearType.Electric.GetKey(), 0);
 Console.WriteLine(carBuilder.Car.ToString());
+#endregion
+
+#region Prototype
+Product product = new Product() { Code = "BMW", Description = "Alman arabası"};
+Product product1 = product.Clone() as Product;// deep copy
+Product product2 = product.CloneImplement() as Product;// deep copy ours
+product1.Code = "Mercedes";
+product2.Code = "TOGG";
+product2.Description = "Türk arabası";
+Console.WriteLine(product.Code + " "+ product.Description);
+Product product3 = product;// shallow copy both objects are changed 
+product3.Code = "Renault";
+product3.Description = "Fransız arabası";
+Console.WriteLine(product1.Code + " " + product1.Description);
+Console.WriteLine(product2.Code + " " + product2.Description);
+Console.WriteLine(product3.Code + " " + product3.Description);
+Console.WriteLine(product.Code + " " + product.Description);
 #endregion
 
