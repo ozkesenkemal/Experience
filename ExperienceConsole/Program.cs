@@ -2,6 +2,8 @@
 using AbstractFactoryPattern;
 using AbstractFactoryPattern.DBConnection;
 using AbstractFactoryPattern.Publisher.Factories;
+using AdapterGof;
+using BridgeGof;
 using BuilderPattern;
 using Chess;
 using Common;
@@ -87,8 +89,7 @@ logger.Error("deneme err");
 
 #endregion
 
-
-#region "Factory GOF"
+#region "Factory"
 PaymentFactory paymentFactory = new PaymentFactory();
 IPayment payment = paymentFactory.DoPayment("CreditCard");
 payment.DoPayment();
@@ -135,8 +136,7 @@ Publisher<TwitterVideoPublisherFactory> publisher3 = new Publisher<TwitterVideoP
 publisher3.Publish();
 #endregion
 
-
-#region Builder GOF
+#region Builder
 CarProducer carProducer = new CarProducer();
 CarBuilder carBuilder = new MercedesBuilder();
 carProducer.Produce(carBuilder, "CLA", GearType.Manuel.GetKey(), 6001);
@@ -171,3 +171,31 @@ Console.WriteLine(product3.Code + " " + product3.Description);
 Console.WriteLine(product.Code + " " + product.Description);
 #endregion
 
+#region Adapter
+Console.WriteLine("-------------------------------");
+ILogger logger2 = new XLoggerAdapter();
+logger2.Log ("My log is here");
+Console.WriteLine("-------------------------------");
+#endregion
+
+#region Bridge
+Console.WriteLine("-------------------------------");
+Report report = new SalesReport(new DesktopFormat());
+report.Display();
+
+Report report2 = new SalesReport(new WebFormat());
+report2.Display();
+
+Report report3 = new PerformanceReport(new DesktopFormat());
+report3.Display();
+
+Report report4 = new PerformanceReport(new WebFormat());
+report4.Display();
+Console.WriteLine("-------------------------------");
+#endregion
+
+#region Composite
+Console.WriteLine("-------------------------------");
+
+Console.WriteLine("-------------------------------");
+#endregion

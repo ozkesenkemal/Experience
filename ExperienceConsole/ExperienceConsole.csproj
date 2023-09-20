@@ -9,6 +9,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AbstractFactoryPattern\AbstractFactoryPattern.csproj" />
+    <ProjectReference Include="..\AdapterGof\AdapterGof.csproj" />
+    <ProjectReference Include="..\BridgeGof\BridgeGof.csproj" />
     <ProjectReference Include="..\BuilderPattern\BuilderPattern.csproj" />
     <ProjectReference Include="..\Chess\Chess.csproj" />
     <ProjectReference Include="..\Common\Common.csproj" />
