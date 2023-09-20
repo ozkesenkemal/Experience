@@ -33,7 +33,7 @@ namespace CompositeGof
                 {
                     Console.WriteLine($"{Rank} - {Name} get order and ordered to soldiers!");
                 }
-                soldier.ExecuteOrder(),
+                soldier.ExecuteOrder();
             } 
         }
     }
