@@ -7,7 +7,10 @@ using BridgeGof;
 using BuilderPattern;
 using Chess;
 using Common;
+using CompositeGof;
+using DecaratorGof;
 using ExperienceConsole;
+using FacadeGof;
 using FactoryPattern;
 using PrototaypePattern;
 using Singleton;
@@ -196,6 +199,58 @@ Console.WriteLine("-------------------------------");
 
 #region Composite
 Console.WriteLine("-------------------------------");
+Commander general = new Commander("Kemal", "General");
+Commander albay = new Commander("Ali", "Albay");
+general.AddSoldier(albay);
+Commander yarbay = new Commander("Veli", "Yarbay");
+albay.AddSoldier(yarbay);
+Private private1 = new Private("Rüzgar","Er");
+Private private2 = new Private("Ayşe","Er");
+Private private3 = new Private("Ahmet","Er");
+yarbay.AddSoldier(private1);
+yarbay.AddSoldier(private2);
+yarbay.AddSoldier(private3);
 
+general.ExecuteOrder();
+Console.WriteLine("-------------------------------");
+#endregion
+
+#region Decarator
+Console.WriteLine("-------------------------------");
+IDBHelper dBHelper = new DBHelper();
+dBHelper.Get();
+dBHelper.Save();
+dBHelper.Update();
+dBHelper.Delete();
+Console.WriteLine("-------------------------------");
+DBHelperDecarator decarator = new DBHelperDecarator(dBHelper);
+decarator.Get();
+decarator.Save();
+decarator.Update();
+decarator.Delete();
+Console.WriteLine("-------------------------------");
+LogDBHelperDecarator decarator2 = new LogDBHelperDecarator(dBHelper);
+decarator2.Get();
+decarator2.Save();
+decarator2.Update();
+decarator2.Delete();
+Console.WriteLine("-------------------------------");
+MailDBHelperDecarator decarator3 = new MailDBHelperDecarator(dBHelper);
+decarator3.Get();
+decarator3.Save();
+decarator3.Update();
+decarator3.Delete();
+Console.WriteLine("-------------------------------");
+SecurityDBHelperDecarator decarator4 = new SecurityDBHelperDecarator(dBHelper);
+decarator4.Get();
+decarator4.Save();
+decarator4.Update();
+decarator4.Delete();
+#endregion
+
+#region Facade
+Console.WriteLine("-------------------------------");
+HotelSearcherFacade hotelSearcherFacade = new HotelSearcherFacade();
+hotelSearcherFacade.SearchHotel("My tckn");
 Console.WriteLine("-------------------------------");
 #endregion

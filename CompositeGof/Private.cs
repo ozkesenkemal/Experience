@@ -2,7 +2,7 @@
 
 namespace CompositeGof
 {
-    internal class Private : Soldier
+    public class Private : Soldier
     {
         public Private(string name, string rank) : base(name, rank)
         {

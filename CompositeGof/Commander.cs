@@ -31,7 +31,7 @@ namespace CompositeGof
             {
                 if(soldier.Rank != "Er")
                 {
-                    Console.WriteLine($"{Rank} - {Name} get order and ordered to soldiers!");
+                    Console.WriteLine($"{soldier.Rank} - {soldier.Name} get order and ordered to soldiers!");
                 }
                 soldier.ExecuteOrder();
             } 
