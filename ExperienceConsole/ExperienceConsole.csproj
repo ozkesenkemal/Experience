@@ -18,7 +18,9 @@
     <ProjectReference Include="..\DecaratorGof\DecaratorGof.csproj" />
     <ProjectReference Include="..\FacadeGof\FacadeGof.csproj" />
     <ProjectReference Include="..\FactoryPattern\FactoryPattern.csproj" />
+    <ProjectReference Include="..\FlyweightGof\FlyweightGof.csproj" />
     <ProjectReference Include="..\PrototaypePattern\PrototypePattern.csproj" />
+    <ProjectReference Include="..\ProxyGof\ProxyGof.csproj" />
     <ProjectReference Include="..\Singleton\Singleton.csproj" />
   </ItemGroup>
 

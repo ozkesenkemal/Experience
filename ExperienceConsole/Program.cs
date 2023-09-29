@@ -12,7 +12,9 @@ using DecaratorGof;
 using ExperienceConsole;
 using FacadeGof;
 using FactoryPattern;
+using FlyweightGof;
 using PrototaypePattern;
+using ProxyGof;
 using Singleton;
 using System.Data.SqlClient;
 
@@ -252,5 +254,44 @@ decarator4.Delete();
 Console.WriteLine("-------------------------------");
 HotelSearcherFacade hotelSearcherFacade = new HotelSearcherFacade();
 hotelSearcherFacade.SearchHotel("My tckn");
+Console.WriteLine("-------------------------------");
+#endregion
+
+#region FlyWeight
+Console.WriteLine("-------------------------------");
+SoldierType[] soldierTypeList =
+{
+    SoldierType.Private,SoldierType.Private,SoldierType.Private,SoldierType.Private,SoldierType.Private,
+    SoldierType.Sergeant,SoldierType.Sergeant,
+    SoldierType.Commander
+};
+
+string[] nameList = { "Ali", "Veli", "Ahmet", "Hasan", "Hüseyin", "Kemal", "Özgür", "Naci" };
+Random rnd = new Random();
+SoldierFactory soldierFactory = new SoldierFactory();
+int X = 0, Y = 0, randomCount = 0;
+foreach (var soldierType in soldierTypeList)
+{
+    SoldierFlyweight soldier = soldierFactory.GetSoldier(soldierType);
+    X += 5;
+    Y += 10;
+    soldier.XLocation = X;
+    soldier.YLocation = Y;
+    randomCount = rnd.Next(soldierTypeList.Length);
+    soldier.Name = nameList[randomCount];
+    soldier.MoveTo(X, Y, soldier.Name);
+}
+Console.WriteLine("-------------------------------");
+#endregion
+
+#region Proxy
+Console.WriteLine("-------------------------------");
+ICommandExecutor commandExecutor = new CommandExecutorProxy("admin", "admin");
+commandExecutor.RunCommand("select * from");
+commandExecutor.RunCommand("alter table");
+
+commandExecutor = new CommandExecutorProxy("ali", "123");
+commandExecutor.RunCommand("select * from");
+commandExecutor.RunCommand("alter table");
 Console.WriteLine("-------------------------------");
 #endregion
