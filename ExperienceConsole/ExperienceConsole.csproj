@@ -21,6 +21,7 @@
     <ProjectReference Include="..\FacadeGof\FacadeGof.csproj" />
     <ProjectReference Include="..\FactoryPattern\FactoryPattern.csproj" />
     <ProjectReference Include="..\FlyweightGof\FlyweightGof.csproj" />
+    <ProjectReference Include="..\InterpreterGof\InterpreterGof.csproj" />
     <ProjectReference Include="..\PrototaypePattern\PrototypePattern.csproj" />
     <ProjectReference Include="..\ProxyGof\ProxyGof.csproj" />
     <ProjectReference Include="..\Singleton\Singleton.csproj" />

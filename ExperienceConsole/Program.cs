@@ -15,6 +15,7 @@ using ExperienceConsole;
 using FacadeGof;
 using FactoryPattern;
 using FlyweightGof;
+using InterpreterGof;
 using PrototaypePattern;
 using ProxyGof;
 using Singleton;
@@ -339,5 +340,18 @@ commandManager._commands.Enqueue(command2);
 commandManager._commands.Enqueue(command3);
 commandManager._commands.Enqueue(command4);
 commandManager.ExecuteAll();
+Console.WriteLine("-------------------------------");
+#endregion
+
+#region Interpreter
+Console.WriteLine("-------------------------------");
+//MDCLXVI = (M = 1000) + (D = 500) + (C = 100) + (L = 50) + (X = 10) - (I = 1) = 1664
+ExpressionRunner runner = new ExpressionRunner();
+Context context = new Context() { Formula = "MDCLXVI"};
+runner.RunExpression(context);
+context = new Context() { Formula = "MDCLXIV" };
+runner.RunExpression(context);
+context = new Context() { Formula = "MCCCCLIII" };
+runner.RunExpression(context);
 Console.WriteLine("-------------------------------");
 #endregion
