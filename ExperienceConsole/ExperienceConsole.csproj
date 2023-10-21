@@ -12,6 +12,7 @@
     <ProjectReference Include="..\AdapterGof\AdapterGof.csproj" />
     <ProjectReference Include="..\BridgeGof\BridgeGof.csproj" />
     <ProjectReference Include="..\BuilderPattern\BuilderPattern.csproj" />
+    <ProjectReference Include="..\ChainOfResponsibilityGof\ChainOfResponsibilityGof.csproj" />
     <ProjectReference Include="..\Chess\Chess.csproj" />
     <ProjectReference Include="..\Common\Common.csproj" />
     <ProjectReference Include="..\CompositeGof\CompositeGof.csproj" />

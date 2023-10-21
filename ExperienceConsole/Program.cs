@@ -5,6 +5,7 @@ using AbstractFactoryPattern.Publisher.Factories;
 using AdapterGof;
 using BridgeGof;
 using BuilderPattern;
+using ChainOfResponsibilityGof;
 using Chess;
 using Common;
 using CompositeGof;
@@ -293,5 +294,28 @@ commandExecutor.RunCommand("alter table");
 commandExecutor = new CommandExecutorProxy("ali", "123");
 commandExecutor.RunCommand("select * from");
 commandExecutor.RunCommand("alter table");
+Console.WriteLine("-------------------------------");
+#endregion
+
+#region Chain Of Responsibility
+Console.WriteLine("-------------------------------");
+Withdraw withdraw1 = new Withdraw("1", 900, "TL");
+Withdraw withdraw2 = new Withdraw("1", 1900, "TL");
+Withdraw withdraw3 = new Withdraw("1", 7900, "TL");
+Withdraw withdraw4 = new Withdraw("1", 79000, "TL");
+Worker director = new Director();
+Worker gmy = new AsistantGeneralManager();
+Worker gm = new GeneralManager();
+director.SetNextApprover(gmy);
+gmy.SetNextApprover(gm);
+
+director.Execute(withdraw1);
+Console.WriteLine("-------------------------------");
+director.Execute(withdraw2);
+Console.WriteLine("-------------------------------"); 
+director.Execute(withdraw3);
+Console.WriteLine("-------------------------------"); 
+director.Execute(withdraw4);
+Console.WriteLine("-------------------------------");
 Console.WriteLine("-------------------------------");
 #endregion

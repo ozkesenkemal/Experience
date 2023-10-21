@@ -43,19 +43,23 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrototypePattern", "Protota
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StructuralGofs", "StructuralGofs", "{499B7592-E104-4A75-9997-8A3C1C4CAEBA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdapterGof", "AdapterGof\AdapterGof.csproj", "{FE5E88C3-F884-4968-8560-E29CA8519B84}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdapterGof", "AdapterGof\AdapterGof.csproj", "{FE5E88C3-F884-4968-8560-E29CA8519B84}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BridgeGof", "BridgeGof\BridgeGof.csproj", "{B536424B-2FC5-45FC-9BAF-D25DCBD60091}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BridgeGof", "BridgeGof\BridgeGof.csproj", "{B536424B-2FC5-45FC-9BAF-D25DCBD60091}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompositeGof", "CompositeGof\CompositeGof.csproj", "{CC77D2F1-7AF0-40F6-95EC-2781ADBEA4A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CompositeGof", "CompositeGof\CompositeGof.csproj", "{CC77D2F1-7AF0-40F6-95EC-2781ADBEA4A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecaratorGof", "DecaratorGof\DecaratorGof.csproj", "{F27E985A-B99E-4C38-88CE-F6EC08A0B150}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DecaratorGof", "DecaratorGof\DecaratorGof.csproj", "{F27E985A-B99E-4C38-88CE-F6EC08A0B150}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FacadeGof", "FacadeGof\FacadeGof.csproj", "{9A36B5FB-B1B4-4F3C-914B-C1C24E9815BA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FacadeGof", "FacadeGof\FacadeGof.csproj", "{9A36B5FB-B1B4-4F3C-914B-C1C24E9815BA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlyweightGof", "FlyweightGof\FlyweightGof.csproj", "{BD0FD8E2-45EA-4FFC-9A8C-1ED600540FBC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlyweightGof", "FlyweightGof\FlyweightGof.csproj", "{BD0FD8E2-45EA-4FFC-9A8C-1ED600540FBC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProxyGof", "ProxyGof\ProxyGof.csproj", "{1A198CBC-5295-4A1C-AC36-485F3373A932}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProxyGof", "ProxyGof\ProxyGof.csproj", "{1A198CBC-5295-4A1C-AC36-485F3373A932}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BehavioralGofs", "BehavioralGofs", "{1FA3E678-C1E4-4174-AEFB-5D579A2684A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChainOfResponsibilityGof", "ChainOfResponsibilityGof\ChainOfResponsibilityGof.csproj", "{51846E05-C149-4D20-BA02-6FCB41F1DCBA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -151,6 +155,10 @@ Global
 		{1A198CBC-5295-4A1C-AC36-485F3373A932}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A198CBC-5295-4A1C-AC36-485F3373A932}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A198CBC-5295-4A1C-AC36-485F3373A932}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51846E05-C149-4D20-BA02-6FCB41F1DCBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51846E05-C149-4D20-BA02-6FCB41F1DCBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51846E05-C149-4D20-BA02-6FCB41F1DCBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51846E05-C149-4D20-BA02-6FCB41F1DCBA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -178,6 +186,8 @@ Global
 		{9A36B5FB-B1B4-4F3C-914B-C1C24E9815BA} = {499B7592-E104-4A75-9997-8A3C1C4CAEBA}
 		{BD0FD8E2-45EA-4FFC-9A8C-1ED600540FBC} = {499B7592-E104-4A75-9997-8A3C1C4CAEBA}
 		{1A198CBC-5295-4A1C-AC36-485F3373A932} = {499B7592-E104-4A75-9997-8A3C1C4CAEBA}
+		{1FA3E678-C1E4-4174-AEFB-5D579A2684A8} = {DB75FA51-CBF1-4C98-846B-200A659C33C5}
+		{51846E05-C149-4D20-BA02-6FCB41F1DCBA} = {1FA3E678-C1E4-4174-AEFB-5D579A2684A8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8C52BA56-D5B9-4010-BC7D-756C4D315454}
