@@ -7,6 +7,7 @@ using BridgeGof;
 using BuilderPattern;
 using ChainOfResponsibilityGof;
 using Chess;
+using CommandGof;
 using Common;
 using CompositeGof;
 using DecaratorGof;
@@ -317,5 +318,26 @@ director.Execute(withdraw3);
 Console.WriteLine("-------------------------------"); 
 director.Execute(withdraw4);
 Console.WriteLine("-------------------------------");
+#endregion
+
+#region Command
+Console.WriteLine("-------------------------------");
+ReceiverBank bank1 = new ReceiverBank("AktifBank");
+ReceiverBank bank2 = new ReceiverBank("Teb");
+
+ReceiverSupplier supplier1 = new ReceiverSupplier(1, "Paycore");
+ReceiverSupplier supplier2 = new ReceiverSupplier(2, "BankSoft");
+
+ICommand command1 = new BankAddCommand(bank1);
+ICommand command2 = new BankDeleteCommand(bank2);
+ICommand command3 = new EnableSupplierCommand(supplier1);
+ICommand command4 = new DisableSupplierCommand(supplier2);
+
+CommandManager commandManager = new CommandManager();
+commandManager._commands.Enqueue(command1);
+commandManager._commands.Enqueue(command2);
+commandManager._commands.Enqueue(command3);
+commandManager._commands.Enqueue(command4);
+commandManager.ExecuteAll();
 Console.WriteLine("-------------------------------");
 #endregion

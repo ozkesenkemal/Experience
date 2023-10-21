@@ -14,6 +14,7 @@
     <ProjectReference Include="..\BuilderPattern\BuilderPattern.csproj" />
     <ProjectReference Include="..\ChainOfResponsibilityGof\ChainOfResponsibilityGof.csproj" />
     <ProjectReference Include="..\Chess\Chess.csproj" />
+    <ProjectReference Include="..\CommandGof\CommandGof.csproj" />
     <ProjectReference Include="..\Common\Common.csproj" />
     <ProjectReference Include="..\CompositeGof\CompositeGof.csproj" />
     <ProjectReference Include="..\DecaratorGof\DecaratorGof.csproj" />
