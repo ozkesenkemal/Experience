@@ -12,19 +12,24 @@ namespace Singleton
         {
 
         }
-        private static object _lockObj = new object();
+        private static volatile object _lockObj = new object();
         private static Logger? _logger;
         public static Logger GetInstance()
         {
-            lock (_lockObj)
+            if (_logger == null)
             {
-                if(_logger == null)
+                lock (_lockObj)
                 {
-                    _logger = new Logger();
-                }
+                    if (_logger == null)
+                    {
+                        _logger = new Logger();
+                    }
 
-                return _logger;
+                    return _logger;
+                }
             }
+
+            return _logger;
         }
 
         public void Info(string message)
