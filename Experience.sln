@@ -59,11 +59,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProxyGof", "ProxyGof\ProxyG
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BehavioralGofs", "BehavioralGofs", "{1FA3E678-C1E4-4174-AEFB-5D579A2684A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChainOfResponsibilityGof", "ChainOfResponsibilityGof\ChainOfResponsibilityGof.csproj", "{51846E05-C149-4D20-BA02-6FCB41F1DCBA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChainOfResponsibilityGof", "ChainOfResponsibilityGof\ChainOfResponsibilityGof.csproj", "{51846E05-C149-4D20-BA02-6FCB41F1DCBA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandGof", "CommandGof\CommandGof.csproj", "{7E74A18A-427B-4046-A522-1F1294944C73}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommandGof", "CommandGof\CommandGof.csproj", "{7E74A18A-427B-4046-A522-1F1294944C73}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterpreterGof", "InterpreterGof\InterpreterGof.csproj", "{44DBF99C-349E-4618-954C-00D435223E90}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InterpreterGof", "InterpreterGof\InterpreterGof.csproj", "{44DBF99C-349E-4618-954C-00D435223E90}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StrategyGof", "StrategyGof\StrategyGof.csproj", "{8E1FF925-5596-496A-BF95-C8443F41BE76}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -171,6 +173,10 @@ Global
 		{44DBF99C-349E-4618-954C-00D435223E90}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{44DBF99C-349E-4618-954C-00D435223E90}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{44DBF99C-349E-4618-954C-00D435223E90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E1FF925-5596-496A-BF95-C8443F41BE76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E1FF925-5596-496A-BF95-C8443F41BE76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E1FF925-5596-496A-BF95-C8443F41BE76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E1FF925-5596-496A-BF95-C8443F41BE76}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -202,6 +208,7 @@ Global
 		{51846E05-C149-4D20-BA02-6FCB41F1DCBA} = {1FA3E678-C1E4-4174-AEFB-5D579A2684A8}
 		{7E74A18A-427B-4046-A522-1F1294944C73} = {1FA3E678-C1E4-4174-AEFB-5D579A2684A8}
 		{44DBF99C-349E-4618-954C-00D435223E90} = {1FA3E678-C1E4-4174-AEFB-5D579A2684A8}
+		{8E1FF925-5596-496A-BF95-C8443F41BE76} = {1FA3E678-C1E4-4174-AEFB-5D579A2684A8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8C52BA56-D5B9-4010-BC7D-756C4D315454}

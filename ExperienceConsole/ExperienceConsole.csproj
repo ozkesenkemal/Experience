@@ -25,6 +25,7 @@
     <ProjectReference Include="..\PrototaypePattern\PrototypePattern.csproj" />
     <ProjectReference Include="..\ProxyGof\ProxyGof.csproj" />
     <ProjectReference Include="..\Singleton\Singleton.csproj" />
+    <ProjectReference Include="..\StrategyGof\StrategyGof.csproj" />
   </ItemGroup>
 
 </Project>

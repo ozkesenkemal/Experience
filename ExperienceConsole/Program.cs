@@ -19,6 +19,7 @@ using InterpreterGof;
 using PrototaypePattern;
 using ProxyGof;
 using Singleton;
+using StrategyGof;
 using System.Data.SqlClient;
 
 
@@ -353,5 +354,31 @@ context = new Context() { Formula = "MDCLXIV" };
 runner.RunExpression(context);
 context = new Context() { Formula = "MCCCCLIII" };
 runner.RunExpression(context);
+Console.WriteLine("-------------------------------");
+#endregion
+
+#region Strategy
+Console.WriteLine("-------------------------------");
+DateTime startTime = DateTime.Now;
+List<int> list = new List<int> { 0, 7, 3, 10, 8, 5, 6 };
+Sorter sorter = new Sorter(new BubleSort());
+sorter.Sort(list);
+DateTime endTime = DateTime.Now;
+Console.WriteLine($"BubleSort elapsed time: {endTime.Millisecond - startTime.Millisecond}");
+
+startTime = DateTime.Now;
+list = new List<int> { 0, 7, 3, 10, 8, 5, 6 };
+sorter = new Sorter(new QuickSort());
+sorter.Sort(list);
+endTime = DateTime.Now;
+Console.WriteLine($"QuickSort elapsed time: {endTime.Millisecond - startTime.Millisecond}");
+
+startTime = DateTime.Now;
+list = new List<int> { 0, 7, 3, 10, 8, 5, 6 };
+sorter = new Sorter(new InsertionSort());
+sorter.Sort(list);
+endTime = DateTime.Now;
+Console.WriteLine($"InsertionSort elapsed time: {endTime.Millisecond - startTime.Millisecond}");
+
 Console.WriteLine("-------------------------------");
 #endregion
