@@ -16,6 +16,7 @@ using FacadeGof;
 using FactoryPattern;
 using FlyweightGof;
 using InterpreterGof;
+using IteratorGof;
 using PrototaypePattern;
 using ProxyGof;
 using Singleton;
@@ -164,14 +165,14 @@ Console.WriteLine(carBuilder.Car.ToString());
 #endregion
 
 #region Prototype
-Product product = new Product() { Code = "BMW", Description = "Alman arabası"};
-Product product1 = product.Clone() as Product;// deep copy
-Product product2 = product.CloneImplement() as Product;// deep copy ours
+PrototaypePattern.Product product = new PrototaypePattern.Product() { Code = "BMW", Description = "Alman arabası"};
+PrototaypePattern.Product product1 = product.Clone() as PrototaypePattern.Product;// deep copy
+PrototaypePattern.Product product2 = product.CloneImplement() as PrototaypePattern.Product;// deep copy ours
 product1.Code = "Mercedes";
 product2.Code = "TOGG";
 product2.Description = "Türk arabası";
 Console.WriteLine(product.Code + " "+ product.Description);
-Product product3 = product;// shallow copy both objects are changed 
+PrototaypePattern.Product product3 = product;// shallow copy both objects are changed 
 product3.Code = "Renault";
 product3.Description = "Fransız arabası";
 Console.WriteLine(product1.Code + " " + product1.Description);
@@ -379,6 +380,37 @@ sorter = new Sorter(new InsertionSort());
 sorter.Sort(list);
 endTime = DateTime.Now;
 Console.WriteLine($"InsertionSort elapsed time: {endTime.Millisecond - startTime.Millisecond}");
+
+Console.WriteLine("-------------------------------");
+#endregion
+
+#region Iterator
+Console.WriteLine("-------------------------------");
+ProductCollection productCollection = new ProductCollection();
+productCollection[0] = new IteratorGof.Product { Id = 1, Name = "Kredi Kartı", Price = 100 };
+productCollection[0] = new IteratorGof.Product { Id = 2, Name = "Debit", Price = 80 };
+productCollection[0] = new IteratorGof.Product { Id = 3, Name = "Prepaid", Price = 50 };
+productCollection[0] = new IteratorGof.Product { Id = 4, Name = "Virtual", Price = 20 };
+ProductIterator productIterator = new ProductIterator(productCollection);
+productIterator._stepSize = 2;
+ 
+for (IteratorGof.Product productIterator1 = productIterator.First();
+    productIterator.IsContinue;
+    productIterator1 = productIterator.MoveNext())
+{
+    Console.WriteLine(productIterator1.ToString());
+}
+
+ProductList productList = new ProductList();
+productList[0] = new IteratorGof.Product { Id = 1, Name = "Kredi Kartı", Price = 100 };
+productList[0] = new IteratorGof.Product { Id = 2, Name = "Debit", Price = 80 };
+productList[0] = new IteratorGof.Product { Id = 3, Name = "Prepaid", Price = 50 };
+productList[0] = new IteratorGof.Product { Id = 4, Name = "Virtual", Price = 20 };
+
+foreach (var productIterator2 in productList)
+{
+    Console.WriteLine(productIterator2.ToString());
+}
 
 Console.WriteLine("-------------------------------");
 #endregion
