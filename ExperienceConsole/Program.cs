@@ -22,6 +22,7 @@ using ProxyGof;
 using Singleton;
 using StrategyGof;
 using System.Data.SqlClient;
+using TemplateMethodGof;
 
 
 #region "Chess"
@@ -412,5 +413,20 @@ foreach (var productIterator2 in productList)
     Console.WriteLine(productIterator2.ToString());
 }
 
+Console.WriteLine("-------------------------------");
+#endregion
+
+#region Template Report
+Console.WriteLine("-------------------------------");
+GameReporter gameReporter = new XmlReport();
+gameReporter.WriteSummary();
+Console.WriteLine();
+
+gameReporter = new JsonReport();
+gameReporter.WriteSummary();
+Console.WriteLine();
+
+gameReporter = new HtmlReport();
+gameReporter.WriteSummary();
 Console.WriteLine("-------------------------------");
 #endregion

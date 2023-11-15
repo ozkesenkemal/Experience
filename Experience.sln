@@ -69,6 +69,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StrategyGof", "StrategyGof\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IteratorGof", "IteratorGof\IteratorGof.csproj", "{5DB03108-F6CC-417F-BC33-3D9A582E26E4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateMethodGof", "TemplateMethodGof\TemplateMethodGof.csproj", "{64C09F82-CA35-4447-A32D-81DBC60114B4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -183,6 +185,10 @@ Global
 		{5DB03108-F6CC-417F-BC33-3D9A582E26E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5DB03108-F6CC-417F-BC33-3D9A582E26E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5DB03108-F6CC-417F-BC33-3D9A582E26E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64C09F82-CA35-4447-A32D-81DBC60114B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64C09F82-CA35-4447-A32D-81DBC60114B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64C09F82-CA35-4447-A32D-81DBC60114B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64C09F82-CA35-4447-A32D-81DBC60114B4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -216,6 +222,7 @@ Global
 		{44DBF99C-349E-4618-954C-00D435223E90} = {1FA3E678-C1E4-4174-AEFB-5D579A2684A8}
 		{8E1FF925-5596-496A-BF95-C8443F41BE76} = {1FA3E678-C1E4-4174-AEFB-5D579A2684A8}
 		{5DB03108-F6CC-417F-BC33-3D9A582E26E4} = {1FA3E678-C1E4-4174-AEFB-5D579A2684A8}
+		{64C09F82-CA35-4447-A32D-81DBC60114B4} = {1FA3E678-C1E4-4174-AEFB-5D579A2684A8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8C52BA56-D5B9-4010-BC7D-756C4D315454}
