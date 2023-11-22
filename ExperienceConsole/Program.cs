@@ -17,6 +17,7 @@ using FactoryPattern;
 using FlyweightGof;
 using InterpreterGof;
 using IteratorGof;
+using ObserverGof;
 using PrototaypePattern;
 using ProxyGof;
 using Singleton;
@@ -428,5 +429,18 @@ Console.WriteLine();
 
 gameReporter = new HtmlReport();
 gameReporter.WriteSummary();
+Console.WriteLine("-------------------------------");
+#endregion
+
+#region Observer
+Console.WriteLine("-------------------------------");
+FatherObserver fatherObserver = new FatherObserver();
+MotherObserver motherObserver = new MotherObserver();
+TeacherObserver teacherObserver = new TeacherObserver();
+Student student = new Student("Özgür", 1, 2, true);
+student.AddObserver(fatherObserver);
+student.AddObserver(motherObserver);
+student.AddObserver(teacherObserver);
+student.IsStudentExistsOnLesson = false;
 Console.WriteLine("-------------------------------");
 #endregion
