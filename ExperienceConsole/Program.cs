@@ -434,9 +434,9 @@ Console.WriteLine("-------------------------------");
 
 #region Observer
 Console.WriteLine("-------------------------------");
-FatherObserver fatherObserver = new FatherObserver();
-MotherObserver motherObserver = new MotherObserver();
-TeacherObserver teacherObserver = new TeacherObserver();
+FatherObserver fatherObserver = new();
+MotherObserver motherObserver = new();
+TeacherObserver teacherObserver = new();
 Student student = new Student("Özgür", 1, 2, true);
 student.AddObserver(fatherObserver);
 student.AddObserver(motherObserver);
