@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace ObserverGof
@@ -16,7 +14,7 @@ namespace ObserverGof
         public bool IsStudentExistsOnLesson
         {
             get { return _IsStudentExistsOnLesson; }
-            set 
+            set
             {
                 _IsStudentExistsOnLesson = true;
                 Console.WriteLine($"{Age} yaşındaki öğrenci {Id} - {Name} dersi astı.");
