@@ -17,6 +17,7 @@ using FactoryPattern;
 using FlyweightGof;
 using InterpreterGof;
 using IteratorGof;
+using MementoGof;
 using ObserverGof;
 using PrototaypePattern;
 using ProxyGof;
@@ -442,5 +443,22 @@ student.AddObserver(fatherObserver);
 student.AddObserver(motherObserver);
 student.AddObserver(teacherObserver);
 student.IsStudentExistsOnLesson = false;
+Console.WriteLine("-------------------------------");
+#endregion
+
+#region Memento
+Console.WriteLine("-------------------------------");
+Part part = new();
+part.PartName = "1.Bölüm";
+part.PartProgress = 60;
+Console.WriteLine($"Kullanıcı {part.PartName} {part.PartProgress} tamamladı.");
+PartManager partManager = new();
+partManager.PartOldCheckPoint = part.Save();
+Console.WriteLine("Oyun kaydedildi.");
+part.PartProgress = 0;
+Console.WriteLine("Oyuncu öldü yeniden yüklenecek.");
+part.LoadPart(partManager.PartOldCheckPoint);
+Console.WriteLine("Oyun yeniden yüklendi.");
+Console.WriteLine($"Kullanıcı {part.PartName} {part.PartProgress} seviyesinden yeniden başlıyor.");
 Console.WriteLine("-------------------------------");
 #endregion

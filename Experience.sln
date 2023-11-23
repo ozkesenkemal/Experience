@@ -65,13 +65,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommandGof", "CommandGof\Co
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InterpreterGof", "InterpreterGof\InterpreterGof.csproj", "{44DBF99C-349E-4618-954C-00D435223E90}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StrategyGof", "StrategyGof\StrategyGof.csproj", "{8E1FF925-5596-496A-BF95-C8443F41BE76}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StrategyGof", "StrategyGof\StrategyGof.csproj", "{8E1FF925-5596-496A-BF95-C8443F41BE76}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IteratorGof", "IteratorGof\IteratorGof.csproj", "{5DB03108-F6CC-417F-BC33-3D9A582E26E4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IteratorGof", "IteratorGof\IteratorGof.csproj", "{5DB03108-F6CC-417F-BC33-3D9A582E26E4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateMethodGof", "TemplateMethodGof\TemplateMethodGof.csproj", "{64C09F82-CA35-4447-A32D-81DBC60114B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TemplateMethodGof", "TemplateMethodGof\TemplateMethodGof.csproj", "{64C09F82-CA35-4447-A32D-81DBC60114B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObserverGof", "ObserverGof\ObserverGof.csproj", "{925972E3-E1DE-4F3B-A99F-A7CAB31E4693}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ObserverGof", "ObserverGof\ObserverGof.csproj", "{925972E3-E1DE-4F3B-A99F-A7CAB31E4693}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MementoGof", "MementoGof\MementoGof.csproj", "{F1D25C20-0798-49AD-B72E-7FB6664AD906}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -195,6 +197,10 @@ Global
 		{925972E3-E1DE-4F3B-A99F-A7CAB31E4693}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{925972E3-E1DE-4F3B-A99F-A7CAB31E4693}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{925972E3-E1DE-4F3B-A99F-A7CAB31E4693}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1D25C20-0798-49AD-B72E-7FB6664AD906}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1D25C20-0798-49AD-B72E-7FB6664AD906}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1D25C20-0798-49AD-B72E-7FB6664AD906}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1D25C20-0798-49AD-B72E-7FB6664AD906}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -230,6 +236,7 @@ Global
 		{5DB03108-F6CC-417F-BC33-3D9A582E26E4} = {1FA3E678-C1E4-4174-AEFB-5D579A2684A8}
 		{64C09F82-CA35-4447-A32D-81DBC60114B4} = {1FA3E678-C1E4-4174-AEFB-5D579A2684A8}
 		{925972E3-E1DE-4F3B-A99F-A7CAB31E4693} = {1FA3E678-C1E4-4174-AEFB-5D579A2684A8}
+		{F1D25C20-0798-49AD-B72E-7FB6664AD906} = {1FA3E678-C1E4-4174-AEFB-5D579A2684A8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8C52BA56-D5B9-4010-BC7D-756C4D315454}
