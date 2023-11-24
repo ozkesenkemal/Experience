@@ -75,6 +75,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ObserverGof", "ObserverGof\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MementoGof", "MementoGof\MementoGof.csproj", "{F1D25C20-0798-49AD-B72E-7FB6664AD906}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediatorGof", "MediatorGof\MediatorGof.csproj", "{AB2647F1-02A2-45A8-A9DA-622D563012F7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -201,6 +203,10 @@ Global
 		{F1D25C20-0798-49AD-B72E-7FB6664AD906}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F1D25C20-0798-49AD-B72E-7FB6664AD906}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F1D25C20-0798-49AD-B72E-7FB6664AD906}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB2647F1-02A2-45A8-A9DA-622D563012F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB2647F1-02A2-45A8-A9DA-622D563012F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB2647F1-02A2-45A8-A9DA-622D563012F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB2647F1-02A2-45A8-A9DA-622D563012F7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -237,6 +243,7 @@ Global
 		{64C09F82-CA35-4447-A32D-81DBC60114B4} = {1FA3E678-C1E4-4174-AEFB-5D579A2684A8}
 		{925972E3-E1DE-4F3B-A99F-A7CAB31E4693} = {1FA3E678-C1E4-4174-AEFB-5D579A2684A8}
 		{F1D25C20-0798-49AD-B72E-7FB6664AD906} = {1FA3E678-C1E4-4174-AEFB-5D579A2684A8}
+		{AB2647F1-02A2-45A8-A9DA-622D563012F7} = {1FA3E678-C1E4-4174-AEFB-5D579A2684A8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8C52BA56-D5B9-4010-BC7D-756C4D315454}

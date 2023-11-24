@@ -17,6 +17,7 @@ using FactoryPattern;
 using FlyweightGof;
 using InterpreterGof;
 using IteratorGof;
+using MediatorGof;
 using MementoGof;
 using ObserverGof;
 using PrototaypePattern;
@@ -460,5 +461,21 @@ Console.WriteLine("Oyuncu öldü yeniden yüklenecek.");
 part.LoadPart(partManager.PartOldCheckPoint);
 Console.WriteLine("Oyun yeniden yüklendi.");
 Console.WriteLine($"Kullanıcı {part.PartName} {part.PartProgress} seviyesinden yeniden başlıyor.");
+Console.WriteLine("-------------------------------");
+#endregion
+
+#region Mediator
+Console.WriteLine("-------------------------------");
+SabihaGokcenAirControl airportControl = new();
+TurkishAirlines turkishAirlines = new() { _airportControl = airportControl, _fligthNumber = "TK01", _from = "Antalya", _way = "25,50" };
+airportControl.Register(turkishAirlines);
+PegasusAirlines pegasusAirlines = new() { _airportControl = airportControl, _fligthNumber = "PC01", _from = "İzmir", _way = "25,50" };
+airportControl.Register(pegasusAirlines);
+KatarAirlines katarAirlines = new() { _airportControl = airportControl, _fligthNumber = "KT01", _from = "Katar", _way = "35,50" };
+airportControl.Register(katarAirlines);
+
+katarAirlines.RequestWay(katarAirlines._way);
+pegasusAirlines.RequestWay(pegasusAirlines._way);
+turkishAirlines.RequestWay(turkishAirlines._way);
 Console.WriteLine("-------------------------------");
 #endregion

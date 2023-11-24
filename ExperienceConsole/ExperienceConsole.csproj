@@ -23,6 +23,7 @@
     <ProjectReference Include="..\FlyweightGof\FlyweightGof.csproj" />
     <ProjectReference Include="..\InterpreterGof\InterpreterGof.csproj" />
     <ProjectReference Include="..\IteratorGof\IteratorGof.csproj" />
+    <ProjectReference Include="..\MediatorGof\MediatorGof.csproj" />
     <ProjectReference Include="..\MementoGof\MementoGof.csproj" />
     <ProjectReference Include="..\ObserverGof\ObserverGof.csproj" />
     <ProjectReference Include="..\PrototaypePattern\PrototypePattern.csproj" />
