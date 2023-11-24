@@ -27,6 +27,7 @@ using StateGof;
 using StrategyGof;
 using System.Data.SqlClient;
 using TemplateMethodGof;
+using VisitorGof;
 
 
 #region "Chess"
@@ -489,5 +490,21 @@ asistant.ChangeMod(new Away());
 asistant.Answer();
 asistant.ChangeMod(new Close());
 asistant.Answer();
+Console.WriteLine("-------------------------------");
+#endregion
+
+#region Visitor
+Console.WriteLine("-------------------------------");
+PlainText plainText = new();
+BoldText boldText = new();
+HyperLink hyperLink = new();
+plainText.Text = "experience is this";
+boldText.Text = "bold text";
+hyperLink.Text = "www.google.com";
+Visitor visitor = new HtmlVisitor();
+plainText.Accept(visitor);
+boldText.Accept(visitor);
+hyperLink.Accept(visitor);
+Console.WriteLine(visitor.Output);
 Console.WriteLine("-------------------------------");
 #endregion
