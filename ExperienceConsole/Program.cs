@@ -23,6 +23,7 @@ using ObserverGof;
 using PrototaypePattern;
 using ProxyGof;
 using Singleton;
+using StateGof;
 using StrategyGof;
 using System.Data.SqlClient;
 using TemplateMethodGof;
@@ -477,5 +478,16 @@ airportControl.Register(katarAirlines);
 katarAirlines.RequestWay(katarAirlines._way);
 pegasusAirlines.RequestWay(pegasusAirlines._way);
 turkishAirlines.RequestWay(turkishAirlines._way);
+Console.WriteLine("-------------------------------");
+#endregion
+
+#region State
+Console.WriteLine("-------------------------------");
+Asistant asistant = new();
+asistant.Answer();
+asistant.ChangeMod(new Away());
+asistant.Answer();
+asistant.ChangeMod(new Close());
+asistant.Answer();
 Console.WriteLine("-------------------------------");
 #endregion
