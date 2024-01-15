@@ -2,6 +2,7 @@
 using AbstractFactoryPattern;
 using AbstractFactoryPattern.DBConnection;
 using AbstractFactoryPattern.Publisher.Factories;
+using ActiveRecord;
 using AdapterGof;
 using BridgeGof;
 using BuilderPattern;
@@ -507,4 +508,34 @@ boldText.Accept(visitor);
 hyperLink.Accept(visitor);
 Console.WriteLine(visitor.Output);
 Console.WriteLine("-------------------------------");
+#endregion
+
+#region DataLayer
+#region ActiveRecord
+Console.WriteLine("-------------------------------");
+CustomerActiveRecord customer2 = new();
+customer2.Country = "Türkiye";
+customer2.FirstName = "Kemal";
+customer2.LastName = "Özkesen";
+customer2.BirthDate = new DateTime(1989, 07, 05);
+int customerId = customer2.AddCustomer();
+
+CustomerActiveRecord customerGet2 = new();
+customerGet2.Id = customer2.Id;
+customerGet2.GetCustomerByBusinessRule();
+customerGet2.GetCustomerByOtherBusinessRule();
+
+CustomerActiveRecord customerUpdate2 = new();
+customerUpdate2.Country = "Türkiye";
+customerUpdate2.FirstName = "Kemal";
+customerUpdate2.LastName = "Özkesen";
+customerUpdate2.BirthDate = new DateTime(1989, 07, 05);
+customerUpdate2.UpdateCustomer();
+
+CustomerActiveRecord customerDelete2 = new();
+customerDelete2.Id = customerId;
+customerDelete2.RemoveCustomer();
+
+Console.WriteLine("-------------------------------");
+#endregion
 #endregion
