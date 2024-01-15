@@ -11,6 +11,7 @@ using Chess;
 using CommandGof;
 using Common;
 using CompositeGof;
+using DataMapper;
 using DecaratorGof;
 using ExperienceConsole;
 using FacadeGof;
@@ -536,6 +537,23 @@ CustomerActiveRecord customerDelete2 = new();
 customerDelete2.Id = customerId;
 customerDelete2.RemoveCustomer();
 
+Console.WriteLine("-------------------------------");
+#endregion
+
+#region DataMapper
+Console.WriteLine("-------------------------------");
+Customer customer3 = new();  
+customer3.Country = "Türkiye";
+customer3.FirstName = "Kemal";
+customer3.LastName = "Özkesen";
+customer3.BirthDate = new DateTime(1989, 07, 05);
+CustomerDataMapper customerDataMapper = new();
+customerDataMapper.Insert(customer3);
+customer3.Country = "USA";
+customerDataMapper.Update(customer3);
+customerDataMapper.GetAll();
+customerDataMapper.GetById(1);
+customerDataMapper.Delete(customer3);
 Console.WriteLine("-------------------------------");
 #endregion
 #endregion

@@ -18,6 +18,7 @@
     <ProjectReference Include="..\CommandGof\CommandGof.csproj" />
     <ProjectReference Include="..\Common\Common.csproj" />
     <ProjectReference Include="..\CompositeGof\CompositeGof.csproj" />
+    <ProjectReference Include="..\DataMapper\DataMapper.csproj" />
     <ProjectReference Include="..\DecaratorGof\DecaratorGof.csproj" />
     <ProjectReference Include="..\FacadeGof\FacadeGof.csproj" />
     <ProjectReference Include="..\FactoryPattern\FactoryPattern.csproj" />
