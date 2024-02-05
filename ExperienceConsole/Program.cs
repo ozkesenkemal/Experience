@@ -24,10 +24,12 @@ using MementoGof;
 using ObserverGof;
 using PrototaypePattern;
 using ProxyGof;
+using RowDataGateway;
 using Singleton;
 using StateGof;
 using StrategyGof;
 using System.Data.SqlClient;
+using TableGateway;
 using TemplateMethodGof;
 using VisitorGof;
 
@@ -554,6 +556,39 @@ customerDataMapper.Update(customer3);
 customerDataMapper.GetAll();
 customerDataMapper.GetById(1);
 customerDataMapper.Delete(customer3);
+Console.WriteLine("-------------------------------");
+#endregion
+
+#region TableGateway
+Console.WriteLine("-------------------------------");
+CustomerGateway customerGateway = new();
+customerGateway.GetCustomerByFirstName("Ahmet");
+customerGateway.AddCustomer("Ahmet", "Yılmaz", new DateTime(2023,1,1),"Türkiye");
+customerGateway.UpdateCustomer("Ahmet", "Yılmaz", new DateTime(2023,1,1),"Almanya");
+customerGateway.RemoveCustomer(1);
+Console.WriteLine("-------------------------------");
+#endregion
+
+#region RowDataGateway
+Console.WriteLine("-------------------------------");
+RowDataGatewayCustomer customer = new();
+customer.Country = "Türkiye";
+customer.FirstName = "Kemal";
+customer.LastName = "Özkesen";
+customer.BirthDate = new DateTime(1989, 7, 5);
+int id = customer.AddCustomer();
+
+RowDataGatewayCustomer customerGet = new();
+customerGet.Id = id;
+customerGet.GetCustomerById();
+
+RowDataGatewayCustomer customerUpdate = new();
+customerUpdate.Country = "Belçika";
+customerUpdate.UpdateCustomer();
+
+RowDataGatewayCustomer customerDelete = new();
+customerDelete.Id = id;
+customerDelete.RemoveCustomer();
 Console.WriteLine("-------------------------------");
 #endregion
 #endregion
