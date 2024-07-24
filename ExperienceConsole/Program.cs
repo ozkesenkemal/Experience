@@ -33,6 +33,7 @@ using System.Data.SqlClient;
 using TableGateway;
 using TableModel;
 using TemplateMethodGof;
+using TransactionScript;
 using VisitorGof;
 
 
@@ -616,6 +617,17 @@ userTableModel.RegisterUser(user1);
 userTableModel.RegisterUser(user2);
 userTableModel.Login(user1, user1.GetUserName(), user1.GetPassword());
 userTableModel.Login(user2, user2.GetUserName(), user2.GetPassword());
+Console.WriteLine("-------------------------------");
+#endregion
+
+#region TransactionScript
+Console.WriteLine("-------------------------------");
+DailyBasics dailyBasics = new();
+dailyBasics.WokeUp();
+dailyBasics.WashHandsAndFace();
+dailyBasics.GoToWork();
+dailyBasics.DoExercises();
+dailyBasics.Sleep();
 Console.WriteLine("-------------------------------");
 #endregion
 #endregion

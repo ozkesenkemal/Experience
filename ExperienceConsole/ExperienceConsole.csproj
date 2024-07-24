@@ -38,6 +38,7 @@
     <ProjectReference Include="..\TableGateway\TableGateway.csproj" />
     <ProjectReference Include="..\TableModel\TableModel.csproj" />
     <ProjectReference Include="..\TemplateMethodGof\TemplateMethodGof.csproj" />
+    <ProjectReference Include="..\TransactionScript\TransactionScript.csproj" />
     <ProjectReference Include="..\VisitorGof\VisitorGof.csproj" />
   </ItemGroup>
 
