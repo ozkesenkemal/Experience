@@ -13,6 +13,7 @@ using Common;
 using CompositeGof;
 using DataMapper;
 using DecaratorGof;
+using DomainModel;
 using ExperienceConsole;
 using FacadeGof;
 using FactoryPattern;
@@ -591,4 +592,14 @@ customerDelete.Id = id;
 customerDelete.RemoveCustomer();
 Console.WriteLine("-------------------------------");
 #endregion
+#endregion
+
+#region Work Layer
+Console.WriteLine("-------------------------------");
+List<DomainModelWorker> domainModelWorkerList = new List<DomainModelWorker>();
+domainModelWorkerList.Add(new DomainModelWorker() { IsDirector = true, Salary = 100 });
+domainModelWorkerList.Add(new DomainModelWorker() { IsDirector = false, Salary = 50 });
+DomainModelClass domainModel = new DomainModelClass();
+domainModel.CalculateWorkerSalary(domainModelWorkerList);
+Console.WriteLine("-------------------------------");
 #endregion
