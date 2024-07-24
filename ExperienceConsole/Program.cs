@@ -31,6 +31,7 @@ using StateGof;
 using StrategyGof;
 using System.Data.SqlClient;
 using TableGateway;
+using TableModel;
 using TemplateMethodGof;
 using VisitorGof;
 
@@ -595,6 +596,8 @@ Console.WriteLine("-------------------------------");
 #endregion
 
 #region Work Layer
+
+#region Domain Model
 Console.WriteLine("-------------------------------");
 List<DomainModelWorker> domainModelWorkerList = new List<DomainModelWorker>();
 domainModelWorkerList.Add(new DomainModelWorker() { IsDirector = true, Salary = 100 });
@@ -602,4 +605,17 @@ domainModelWorkerList.Add(new DomainModelWorker() { IsDirector = false, Salary =
 DomainModelClass domainModel = new DomainModelClass();
 domainModel.CalculateWorkerSalary(domainModelWorkerList);
 Console.WriteLine("-------------------------------");
+#endregion
+
+#region Table Model
+Console.WriteLine("-------------------------------");
+UserTableModel userTableModel = new UserTableModel();
+User user1 = new() { Id = 1, UserName = "Kemal", Password = "1" };
+User user2 = new() { Id = 2, UserName = "Merve", Password = "1" };
+userTableModel.RegisterUser(user1);
+userTableModel.RegisterUser(user2);
+userTableModel.Login(user1, user1.GetUserName(), user1.GetPassword());
+userTableModel.Login(user2, user2.GetUserName(), user2.GetPassword());
+Console.WriteLine("-------------------------------");
+#endregion
 #endregion

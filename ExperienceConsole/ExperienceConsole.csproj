@@ -36,6 +36,7 @@
     <ProjectReference Include="..\StateGof\StateGof.csproj" />
     <ProjectReference Include="..\StrategyGof\StrategyGof.csproj" />
     <ProjectReference Include="..\TableGateway\TableGateway.csproj" />
+    <ProjectReference Include="..\TableModel\TableModel.csproj" />
     <ProjectReference Include="..\TemplateMethodGof\TemplateMethodGof.csproj" />
     <ProjectReference Include="..\VisitorGof\VisitorGof.csproj" />
   </ItemGroup>
